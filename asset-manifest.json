@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/anupam-portfolio/static/css/main.aa83982f.css",
-    "main.js": "/anupam-portfolio/static/js/main.0e18852f.js",
+    "main.css": "/anupam-portfolio/static/css/main.37385ab9.css",
+    "main.js": "/anupam-portfolio/static/js/main.0d3c2286.js",
     "static/js/453.64a937d5.chunk.js": "/anupam-portfolio/static/js/453.64a937d5.chunk.js",
     "static/media/Profile.jpeg": "/anupam-portfolio/static/media/Profile.db6850b81c3c60e11a07.jpeg",
     "index.html": "/anupam-portfolio/index.html",
-    "main.aa83982f.css.map": "/anupam-portfolio/static/css/main.aa83982f.css.map",
-    "main.0e18852f.js.map": "/anupam-portfolio/static/js/main.0e18852f.js.map",
+    "main.37385ab9.css.map": "/anupam-portfolio/static/css/main.37385ab9.css.map",
+    "main.0d3c2286.js.map": "/anupam-portfolio/static/js/main.0d3c2286.js.map",
     "453.64a937d5.chunk.js.map": "/anupam-portfolio/static/js/453.64a937d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa83982f.css",
-    "static/js/main.0e18852f.js"
+    "static/css/main.37385ab9.css",
+    "static/js/main.0d3c2286.js"
   ]
 }
