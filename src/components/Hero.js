@@ -17,9 +17,15 @@ const Hero = () => (
       <h1>Anupam Bera</h1>
       <p>AI Researcher • Software Developer • Artist</p>
 
-      <a href="#projects" className="btn">
-        View My Work
-      </a>
+      <div className="hero-buttons">
+        <a href="#projects" className="btn">
+          View Projects
+        </a>
+
+        <a href="/resume.pdf" download className="btn resume-btn">
+          Download Resume
+        </a>
+      </div>
     </motion.div>
   </section>
 )
