@@ -1,0 +1,21 @@
+.experience-card {
+  background: rgba(255,255,255,0.04);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.experience-card:hover {
+  border-left: 4px solid #38bdf8;
+  transform: translateX(5px);
+}
+
+.experience-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.experience-card li {
+  margin: 6px 0;
+}

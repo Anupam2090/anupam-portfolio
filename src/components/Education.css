@@ -1,0 +1,16 @@
+.edu-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.edu-card:hover {
+  border: 1px solid #6366f1;
+  transform: translateY(-4px);
+}
+
+.edu-card h3 {
+  color: #38bdf8;
+}
