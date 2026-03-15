@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/anupam-portfolio/static/css/main.cc0d0ccc.css",
+    "main.js": "/anupam-portfolio/static/js/main.bd112f91.js",
+    "static/js/453.64a937d5.chunk.js": "/anupam-portfolio/static/js/453.64a937d5.chunk.js",
+    "index.html": "/anupam-portfolio/index.html",
+    "main.cc0d0ccc.css.map": "/anupam-portfolio/static/css/main.cc0d0ccc.css.map",
+    "main.bd112f91.js.map": "/anupam-portfolio/static/js/main.bd112f91.js.map",
+    "453.64a937d5.chunk.js.map": "/anupam-portfolio/static/js/453.64a937d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc0d0ccc.css",
+    "static/js/main.bd112f91.js"
+  ]
+}
