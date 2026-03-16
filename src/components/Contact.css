@@ -1,31 +1,53 @@
-.contact form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+.contact{
+padding:80px 20px;
+text-align:center;
 }
 
-.contact input,
-.contact textarea {
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  background: #1e293b;
-  color: white;
+.contact h2{
+font-size:32px;
+margin-bottom:40px;
+color:var(--accent);
 }
 
-.contact button {
-  margin-top: 10px;
-  padding: 12px;
-  background: linear-gradient(45deg,#38bdf8,#6366f1);
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
+.contact-container{
+display:flex;
+flex-direction:column;
+gap:20px;
+align-items:center;
 }
 
-.contact button:hover {
-  opacity: 0.9;
+.contact-item{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:18px;
+}
+
+.contact-item a{
+text-decoration:none;
+color:var(--text);
+}
+
+.contact-icon{
+font-size:22px;
+color:var(--accent);
+}
+
+.contact-message{
+margin-top:40px;
+}
+
+.message-btn{
+padding:12px 25px;
+background:var(--accent);
+color:white;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.message-btn:hover{
+opacity:0.9;
+transform:translateY(-3px);
 }

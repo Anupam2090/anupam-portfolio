@@ -1,32 +1,40 @@
-import React, { useRef } from 'react'
-import emailjs from '@emailjs/browser'
+import React from 'react'
 import './Contact.css'
+import { FaPhone, FaEnvelope, FaLinkedin } from 'react-icons/fa'
 
-const Contact = () => {
-  const form = useRef()
-
-  const sendEmail = (e) => {
-    e.preventDefault()
-    emailjs
-      .sendForm('service_id', 'template_id', form.current, 'public_key')
-      .then(() => alert('Message sent!'))
-      .catch(() => alert('Failed, please try again.'))
-  }
-
+function Contact() {
   return (
     <section id="contact" className="contact">
       <h2>Contact Me</h2>
-      <form ref={form} onSubmit={sendEmail}>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea
-          name="message"
-          placeholder="Message"
-          rows="5"
-          required
-        ></textarea>
-        <button type="submit">Send</button>
-      </form>
+
+      <div className="contact-container">
+        <div className="contact-item">
+          <FaPhone className="contact-icon" />
+          <span>+91 6294600797</span>
+        </div>
+
+        <div className="contact-item">
+          <FaEnvelope className="contact-icon" />
+          <a href="mailto:anupambera896@gmail.com">anupambera896@gmail.com</a>
+        </div>
+
+        <div className="contact-item">
+          <FaLinkedin className="contact-icon" />
+          <a
+            href="https://linkedin.com/in/anupam-bera"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin.com/in/anupam-bera
+          </a>
+        </div>
+      </div>
+
+      <div className="contact-message">
+        <a href="mailto:anupambera896@gmail.com" className="message-btn">
+          ✉ Send Me a Message
+        </a>
+      </div>
     </section>
   )
 }
