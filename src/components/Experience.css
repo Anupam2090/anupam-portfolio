@@ -1,21 +1,26 @@
-.experience-card {
-  background: rgba(255,255,255,0.04);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
+.experience-card{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
 }
 
-.experience-card:hover {
-  border-left: 4px solid #38bdf8;
-  transform: translateX(5px);
+/* header layout */
+
+.exp-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
 }
 
-.experience-card h3 {
-  color: #38bdf8;
-  margin-bottom: 10px;
+.exp-header h3{
+margin:0;
 }
 
-.experience-card li {
-  margin: 6px 0;
+/* year styling */
+
+.exp-year{
+font-weight:600;
+color:#38bdf8;
 }

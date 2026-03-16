@@ -15,7 +15,7 @@ const Hero = () => (
 
       <h2>Hello, I'm</h2>
       <h1>Anupam Bera</h1>
-      <p>AI Researcher • Software Developer • Artist</p>
+      <p>PhD Scholar • Software Developer • Artist 🎨</p>
 
       <div className="hero-buttons">
         <a href="#projects" className="btn">
