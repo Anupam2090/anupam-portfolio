@@ -1,12 +1,15 @@
 .contact{
+color: var(--text);   /* default text white */
 padding:80px 20px;
 text-align:center;
 }
 
+/* heading blue */
+
 .contact h2{
 font-size:32px;
 margin-bottom:40px;
-color:var(--accent);
+color:#38bdf8;
 }
 
 .contact-container{
@@ -30,7 +33,7 @@ color:var(--text);
 
 .contact-icon{
 font-size:22px;
-color:var(--accent);
+color:#38bdf8;
 }
 
 .contact-message{
@@ -39,7 +42,7 @@ margin-top:40px;
 
 .message-btn{
 padding:12px 25px;
-background:var(--accent);
+background:linear-gradient(45deg,#6366f1,#38bdf8);
 color:white;
 border-radius:8px;
 text-decoration:none;
@@ -48,6 +51,6 @@ transition:0.3s;
 }
 
 .message-btn:hover{
-opacity:0.9;
 transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
