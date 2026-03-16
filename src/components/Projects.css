@@ -23,3 +23,25 @@
   color: #38bdf8;
   margin-bottom: 8px;
 }
+
+.more-projects{
+margin-top:40px;
+text-align:center;
+}
+
+.github-link{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-top:10px;
+font-size:18px;
+text-decoration:none;
+color:var(--accent);
+font-weight:600;
+transition:0.3s;
+}
+
+.github-link:hover{
+transform:translateY(-3px);
+opacity:0.8;
+}
