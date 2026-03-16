@@ -1,41 +1,66 @@
-.navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  padding: 18px 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(10px);
-  z-index: 100;
+.navbar{
+  position:sticky;
+  top:0;
+  width:100%;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(15,23,42,0.8);
+  backdrop-filter:blur(10px);
+  z-index:100;
+
+  max-width:1200px;
+  margin:auto;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: 700;
-  color: #38bdf8;
+/* logo */
+
+.logo{
+  font-size:22px;
+  font-weight:700;
+  color:#38bdf8;
 }
 
-.nav-links a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #e2e8f0;
-  font-weight: 500;
-  transition: 0.3s;
+/* nav links */
+
+.nav-links{
+  display:flex;
+  gap:25px;
 }
 
-.nav-links a:hover {
-  color: #38bdf8;
+.nav-links a{
+  text-decoration:none;
+  color:#e2e8f0;
+  font-weight:500;
+  transition:0.3s;
 }
 
-.socials a {
-  margin-left: 10px;
-  font-size: 20px;
-  color: #e2e8f0;
-  transition: 0.3s;
+.nav-links a:hover{
+  color:#38bdf8;
 }
 
-.socials a:hover {
-  color: #38bdf8;
+/* right side */
+
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+
+/* social icons */
+
+.socials{
+  display:flex;
+  gap:15px;
+}
+
+.socials a{
+  font-size:22px;
+  color:#e2e8f0;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  color:#38bdf8;
+  transform:scale(1.2);
 }
