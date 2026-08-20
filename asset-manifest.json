@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/anupam-portfolio/static/css/main.a74e7b92.css",
-    "main.js": "/anupam-portfolio/static/js/main.17858ba2.js",
+    "main.js": "/anupam-portfolio/static/js/main.59fb3de3.js",
     "static/js/453.64a937d5.chunk.js": "/anupam-portfolio/static/js/453.64a937d5.chunk.js",
     "static/media/Profile.jpeg": "/anupam-portfolio/static/media/Profile.db6850b81c3c60e11a07.jpeg",
     "index.html": "/anupam-portfolio/index.html",
     "main.a74e7b92.css.map": "/anupam-portfolio/static/css/main.a74e7b92.css.map",
-    "main.17858ba2.js.map": "/anupam-portfolio/static/js/main.17858ba2.js.map",
+    "main.59fb3de3.js.map": "/anupam-portfolio/static/js/main.59fb3de3.js.map",
     "453.64a937d5.chunk.js.map": "/anupam-portfolio/static/js/453.64a937d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a74e7b92.css",
-    "static/js/main.17858ba2.js"
+    "static/js/main.59fb3de3.js"
   ]
 }
