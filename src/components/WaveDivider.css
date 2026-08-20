@@ -1,0 +1,19 @@
+.wave-divider {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10%;
+  line-height: 0;
+}
+
+.wave-divider-svg {
+  width: 100%;
+  height: 40px;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave-divider-svg path {
+    opacity: 0.6 !important;
+  }
+}

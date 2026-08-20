@@ -1,56 +1,110 @@
-.contact{
-color: var(--text);   /* default text white */
-padding:80px 20px;
-text-align:center;
+.contact {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 90px 20px;
+  text-align: center;
+  background: var(--ink);
 }
 
-/* heading blue */
-
-.contact h2{
-font-size:32px;
-margin-bottom:40px;
-color:#38bdf8;
+.contact-eyebrow {
+  display: block;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mint);
+  margin-bottom: 10px;
 }
 
-.contact-container{
-display:flex;
-flex-direction:column;
-gap:20px;
-align-items:center;
+.contact h2 {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 560;
+  font-size: 2.4rem;
+  color: var(--text);
+  margin-bottom: 12px;
 }
 
-.contact-item{
-display:flex;
-align-items:center;
-gap:12px;
-font-size:18px;
+.contact-subtext {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  margin: 0 0 44px;
 }
 
-.contact-item a{
-text-decoration:none;
-color:var(--text);
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
 }
 
-.contact-icon{
-font-size:22px;
-color:#38bdf8;
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 380px;
+  padding: 14px 20px;
+  background: var(--ink-2);
+  border: 1px solid rgba(237, 234, 227, 0.08);
+  border-radius: 10px;
+  font-size: 16px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-.contact-message{
-margin-top:40px;
+.contact-item:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent, var(--mint)) 40%, transparent);
 }
 
-.message-btn{
-padding:12px 25px;
-background:linear-gradient(45deg,#6366f1,#38bdf8);
-color:white;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
+.contact-item a,
+.contact-item span {
+  text-decoration: none;
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.98rem;
 }
 
-.message-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
+.contact-icon {
+  flex-shrink: 0;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent, var(--mint)) 15%, transparent);
+  color: var(--accent, var(--mint));
+}
+
+.contact-message {
+  margin-top: 44px;
+}
+
+.message-btn {
+  display: inline-block;
+  padding: 13px 30px;
+  background: linear-gradient(100deg, var(--coral), var(--gold));
+  color: var(--ink);
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.message-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(255, 107, 74, 0.35);
+}
+
+@media (max-width: 600px) {
+  .contact { padding: 60px 20px; }
+  .contact h2 { font-size: 1.9rem; }
+  .contact-item { max-width: 100%; }
 }

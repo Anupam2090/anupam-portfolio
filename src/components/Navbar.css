@@ -1,66 +1,93 @@
-.navbar{
-  position:sticky;
-  top:0;
-  width:100%;
-  padding:18px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(15,23,42,0.8);
-  backdrop-filter:blur(10px);
-  z-index:100;
-
-  max-width:1200px;
-  margin:auto;
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(11, 14, 20, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(237, 234, 227, 0.06);
 }
 
-/* logo */
-
-.logo{
-  font-size:22px;
-  font-weight:700;
-  color:#38bdf8;
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* nav links */
-
-.nav-links{
-  display:flex;
-  gap:25px;
+.logo {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
 }
 
-.nav-links a{
-  text-decoration:none;
-  color:#e2e8f0;
-  font-weight:500;
-  transition:0.3s;
+.logo span {
+  color: var(--coral);
 }
 
-.nav-links a:hover{
-  color:#38bdf8;
+.nav-links {
+  display: flex;
+  gap: 26px;
 }
 
-/* right side */
-
-.nav-right{
-  display:flex;
-  align-items:center;
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.94rem;
+  font-weight: 500;
+  padding-bottom: 3px;
+  transition: color 0.25s ease;
 }
 
-/* social icons */
-
-.socials{
-  display:flex;
-  gap:15px;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--mint);
+  transition: width 0.25s ease;
 }
 
-.socials a{
-  font-size:22px;
-  color:#e2e8f0;
-  transition:0.3s;
+.nav-links a:hover {
+  color: var(--text);
 }
 
-.socials a:hover{
-  color:#38bdf8;
-  transform:scale(1.2);
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials a {
+  font-size: 19px;
+  color: var(--text-muted);
+  display: flex;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.socials a:hover {
+  color: var(--mint);
+  transform: scale(1.15);
+}
+
+@media (max-width: 720px) {
+  .nav-links {
+    display: none; /* consider a mobile menu toggle if you want links visible on small screens */
+  }
 }

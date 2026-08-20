@@ -8,11 +8,14 @@ import Projects from './components/Projects'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ScrollProgress from './components/ScrollProgress'
+import Publications from './components/Publications'
 import './App.css'
 
 function App() {
   return (
     <div className="App">
+      <ScrollProgress />
       <Navbar />
       <Hero />
       <About />
@@ -20,6 +23,7 @@ function App() {
       <Experience />
       <Projects />
       <Education />
+      <Publications />
       <Contact />
       <Footer />
     </div>

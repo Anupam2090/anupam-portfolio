@@ -1,19 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --ink: #0b0e14;
+  --ink-2: #12161f;
+  --coral: #ff6b4a;
+  --gold: #e3b23c;
+  --mint: #4fd1c5;
+  --text: #edeae3;
+  --text-muted: #8b93a6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0f172a;
-  color: #e2e8f0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--ink);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 section {
-  padding: 80px 10%;
+  padding: 0; /* each section already sets its own vertical rhythm — don't double it up here */
 }
 
-h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #38bdf8;
-  border-bottom: 2px solid #38bdf8;
-  display: inline-block;
-  padding-bottom: 5px;
+::selection {
+  background: var(--coral);
+  color: var(--ink);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

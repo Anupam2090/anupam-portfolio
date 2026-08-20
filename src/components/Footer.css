@@ -1,7 +1,13 @@
 footer {
   text-align: center;
-  padding: 20px;
-  background: #020617;
-  font-size: 14px;
-  color: #94a3b8;
+  padding: 26px 20px;
+  background: var(--ink);
+  border-top: 1px solid rgba(237, 234, 227, 0.06);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+footer span {
+  color: var(--coral);
 }
