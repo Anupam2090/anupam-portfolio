@@ -10,6 +10,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
 import Publications from './components/Publications'
+import Awards from './components/Awards'
 import './App.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Experience />
       <Projects />
       <Education />
+      <Awards />
       <Publications />
       <Contact />
       <Footer />
