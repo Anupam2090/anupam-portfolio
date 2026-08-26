@@ -120,7 +120,11 @@ const Hero = () => {
           <a href="#projects" className="btn">
             View Projects
           </a>
-          <a href="/resume.pdf" download className="resume-btn">
+          <a
+            href={`${process.env.PUBLIC_URL}/resume.pdf`}
+            download
+            className="resume-btn"
+          >
             Download Resume
           </a>
         </motion.div>

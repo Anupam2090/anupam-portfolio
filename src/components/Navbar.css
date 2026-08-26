@@ -3,7 +3,7 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  background: rgba(11, 14, 20, 0.75);
+  background: rgba(11, 14, 20, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(237, 234, 227, 0.06);
 }
@@ -67,6 +67,7 @@
 .nav-right {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 .socials {
@@ -86,8 +87,103 @@
   transform: scale(1.15);
 }
 
+/* ---- hamburger toggle, hidden on desktop ---- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--mint);
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+.nav-toggle span:nth-child(2) {
+  background: var(--gold);
+}
+
+.nav-toggle span:nth-child(3) {
+  background: var(--coral);
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: var(--text);
+}
+
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: var(--text);
+}
+
+/* ---- mobile dropdown panel ---- */
+.nav-mobile-panel {
+  display: none;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  background: var(--ink-2);
+  border-top: 1px solid rgba(237, 234, 227, 0.06);
+  transition: max-height 0.35s ease;
+}
+
+.nav-mobile-panel.open {
+  max-height: 400px;
+}
+
+.nav-mobile-panel a {
+  padding: 14px 24px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(237, 234, 227, 0.05);
+  transition: color 0.25s ease, background 0.25s ease;
+}
+
+.nav-mobile-panel a:hover {
+  color: var(--mint);
+  background: rgba(79, 209, 197, 0.05);
+}
+
+.nav-mobile-panel a:last-child {
+  border-bottom: none;
+}
+
 @media (max-width: 720px) {
   .nav-links {
-    display: none; /* consider a mobile menu toggle if you want links visible on small screens */
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-mobile-panel {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle span,
+  .nav-mobile-panel {
+    transition: none;
   }
 }
