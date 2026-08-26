@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import profile from '../assets/Profile.jpeg'
+import { FaArrowRight, FaDownload } from 'react-icons/fa'
 import './Hero.css'
 
 const roles = ['PhD Scholar', 'Software Developer', 'Artist 🎨']
@@ -118,14 +119,14 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 1.1 }}
         >
           <a href="#projects" className="btn">
-            View Projects
+            View Projects <FaArrowRight className="btn-arrow" />
           </a>
-          <a
-            href={`${process.env.PUBLIC_URL}/resume.pdf`}
+          
+           <a href={`${process.env.PUBLIC_URL}/resume.pdf`}
             download
             className="resume-btn"
           >
-            Download Resume
+            <FaDownload className="btn-icon" /> Download Resume
           </a>
         </motion.div>
       </motion.div>
