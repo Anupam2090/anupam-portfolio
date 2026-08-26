@@ -187,3 +187,24 @@
     transition: none;
   }
 }
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(237, 234, 227, 0.14);
+  background: transparent;
+  color: var(--gold);
+  font-size: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--gold);
+  transform: rotate(-8deg);
+}

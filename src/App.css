@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
-:root {
+:root,
+[data-theme="dark"] {
   --ink: #0b0e14;
   --ink-2: #12161f;
   --coral: #ff6b4a;
@@ -8,6 +9,22 @@
   --mint: #4fd1c5;
   --text: #edeae3;
   --text-muted: #8b93a6;
+  --grid-dot: rgba(237, 234, 227, 0.07);
+  --glow-blend: screen;
+  --glow-opacity: 0.28;
+}
+
+[data-theme="light"] {
+  --ink: #f7f2e9;        /* warm paper, not stark white — easier on the eyes */
+  --ink-2: #ffffff;
+  --coral: #e5502f;      /* deepened for contrast against light bg */
+  --gold: #b5811f;
+  --mint: #16897c;
+  --text: #1c1f26;
+  --text-muted: #5b6272;
+  --grid-dot: rgba(28, 31, 38, 0.06);
+  --glow-blend: multiply; /* screen blend disappears on light backgrounds */
+  --glow-opacity: 0.14;
 }
 
 * {
@@ -20,14 +37,11 @@ body {
   background: var(--ink);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-section {
-  padding: 0; /* each section already sets its own vertical rhythm — don't double it up here */
 }
 
 ::selection {
@@ -42,7 +56,6 @@ button:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  html { scroll-behavior: auto; }
+  body { transition: none; }
 }

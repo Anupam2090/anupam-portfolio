@@ -36,6 +36,15 @@
     <meta property="og:title" content="Anupam Bera — Portfolio" />
     <meta property="og:description" content="PhD Scholar • Software Developer • Artist" />
     <meta property="og:type" content="website" />
+
+    <script>
+      (function () {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
