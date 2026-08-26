@@ -270,3 +270,44 @@
   background: rgba(79, 209, 197, 0.08);
   color: var(--mint);
 } 
+
+.mobile-academics-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 24px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(237, 234, 227, 0.05);
+  text-align: left;
+  color: var(--text-muted);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mobile-academics-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(237, 234, 227, 0.02);
+  transition: max-height 0.3s ease;
+}
+
+.mobile-academics-panel.open {
+  max-height: 200px;
+}
+
+.mobile-academics-panel a {
+  padding: 12px 24px 12px 40px;
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-academics-panel {
+    transition: none;
+  }
+}

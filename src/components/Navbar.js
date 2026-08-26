@@ -1,7 +1,7 @@
 
-
 import React, { useState, useRef, useEffect } from 'react'
 import './Navbar.css'
+
 import {
   FaGithub,
   FaLinkedin,
@@ -9,6 +9,7 @@ import {
   FaMoon,
   FaChevronDown,
 } from 'react-icons/fa'
+
 import { AnimatePresence, motion } from 'framer-motion'
 import { useTheme } from '../hooks/useTheme'
 
@@ -33,6 +34,8 @@ const contactLink = {
 function Navbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [isAcademicsOpen, setIsAcademicsOpen] = useState(false)
+  const [isMobileAcademicsOpen, setIsMobileAcademicsOpen] =
+    useState(false)
 
   const { theme, toggleTheme } = useTheme()
 
@@ -41,14 +44,15 @@ function Navbar() {
   // Close mobile menu
   const closeMenu = () => {
     setIsMobileOpen(false)
+    setIsMobileAcademicsOpen(false)
   }
 
-  // Close Academics dropdown when clicking outside
+  // Close desktop dropdown when clicking outside
   useEffect(() => {
-    const handleClickOutside = (e) => {
+    const handleClickOutside = (event) => {
       if (
         dropdownRef.current &&
-        !dropdownRef.current.contains(e.target)
+        !dropdownRef.current.contains(event.target)
       ) {
         setIsAcademicsOpen(false)
       }
@@ -66,6 +70,10 @@ function Navbar() {
 
   return (
     <nav className="navbar">
+
+      {/* =========================
+          NAVBAR INNER
+      ========================== */}
       <div className="navbar-inner">
 
         {/* Logo */}
@@ -73,20 +81,24 @@ function Navbar() {
           Anupam<span>.</span>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* =========================
+            DESKTOP NAVIGATION
+        ========================== */}
         <div className="nav-links">
 
           {/* Primary Links */}
-          {primaryLinks.map((l) => (
+          {primaryLinks.map((link) => (
             <a
-              key={l.href}
-              href={l.href}
+              key={link.href}
+              href={link.href}
             >
-              {l.label}
+              {link.label}
             </a>
           ))}
 
-          {/* Academics Dropdown */}
+          {/* =========================
+              ACADEMICS DROPDOWN
+          ========================== */}
           <div
             className="nav-dropdown"
             ref={dropdownRef}
@@ -97,11 +109,14 @@ function Navbar() {
               setIsAcademicsOpen(false)
             }
           >
+
             <button
               type="button"
               className="nav-dropdown-trigger"
               onClick={() =>
-                setIsAcademicsOpen((prev) => !prev)
+                setIsAcademicsOpen(
+                  (previous) => !previous
+                )
               }
               aria-expanded={isAcademicsOpen}
               aria-haspopup="true"
@@ -115,14 +130,14 @@ function Navbar() {
               />
             </button>
 
-            {/* Dropdown Menu */}
+            {/* Dropdown */}
             <AnimatePresence>
               {isAcademicsOpen && (
                 <motion.div
                   className="nav-dropdown-menu"
                   initial={{
                     opacity: 0,
-                    y: -8,
+                    y: -10,
                   }}
                   animate={{
                     opacity: 1,
@@ -130,38 +145,41 @@ function Navbar() {
                   }}
                   exit={{
                     opacity: 0,
-                    y: -8,
+                    y: -10,
                   }}
                   transition={{
                     duration: 0.2,
                   }}
                 >
-                  {academicLinks.map((l) => (
+
+                  {academicLinks.map((link) => (
                     <a
-                      key={l.href}
-                      href={l.href}
+                      key={link.href}
+                      href={link.href}
                       onClick={() =>
                         setIsAcademicsOpen(false)
                       }
                     >
-                      {l.label}
+                      {link.label}
                     </a>
                   ))}
+
                 </motion.div>
               )}
             </AnimatePresence>
+
           </div>
 
           {/* Contact */}
-          <a
-            href={contactLink.href}
-          >
+          <a href={contactLink.href}>
             {contactLink.label}
           </a>
 
         </div>
 
-        {/* Right Side */}
+        {/* =========================
+            RIGHT SIDE
+        ========================== */}
         <div className="nav-right">
 
           {/* Theme Toggle */}
@@ -171,6 +189,7 @@ function Navbar() {
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
+
             <AnimatePresence
               mode="wait"
               initial={false}
@@ -203,12 +222,14 @@ function Navbar() {
                 )}
               </motion.span>
             </AnimatePresence>
+
           </button>
 
-          {/* Social Links */}
+          {/* =========================
+              SOCIAL LINKS
+          ========================== */}
           <div className="socials">
 
-            {/* GitHub */}
             <a
               href="https://github.com/Anupam2090"
               target="_blank"
@@ -218,7 +239,6 @@ function Navbar() {
               <FaGithub />
             </a>
 
-            {/* LinkedIn */}
             <a
               href="https://linkedin.com/in/anupam-bera"
               target="_blank"
@@ -230,50 +250,103 @@ function Navbar() {
 
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* =========================
+              MOBILE MENU BUTTON
+          ========================== */}
           <button
             type="button"
             className={`nav-toggle ${
               isMobileOpen ? 'open' : ''
             }`}
             onClick={() =>
-              setIsMobileOpen((prev) => !prev)
+              setIsMobileOpen(
+                (previous) => !previous
+              )
             }
             aria-label="Toggle menu"
             aria-expanded={isMobileOpen}
             aria-controls="mobile-navigation"
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span />
+            <span />
+            <span />
           </button>
 
         </div>
+
       </div>
 
-      {/* Mobile Navigation */}
+      {/* =========================
+          MOBILE NAVIGATION
+      ========================== */}
       <div
         id="mobile-navigation"
         className={`nav-mobile-panel ${
           isMobileOpen ? 'open' : ''
         }`}
       >
-        {[
-          ...primaryLinks,
-          ...academicLinks,
-          contactLink,
-        ].map((l) => (
+
+        {/* Primary Links */}
+        {primaryLinks.map((link) => (
           <a
-            key={l.href}
-            href={l.href}
+            key={link.href}
+            href={link.href}
             onClick={closeMenu}
           >
-            {l.label}
+            {link.label}
           </a>
         ))}
+
+        {/* Mobile Academics */}
+        <button
+          type="button"
+          className="mobile-academics-trigger"
+          onClick={() =>
+            setIsMobileAcademicsOpen(
+              (previous) => !previous
+            )
+          }
+          aria-expanded={isMobileAcademicsOpen}
+        >
+          <span>Academics</span>
+
+          <FaChevronDown
+            className={`nav-dropdown-chevron ${
+              isMobileAcademicsOpen ? 'open' : ''
+            }`}
+          />
+        </button>
+
+        {/* Mobile Academics Submenu */}
+        <div
+          className={`mobile-academics-panel ${
+            isMobileAcademicsOpen ? 'open' : ''
+          }`}
+        >
+          {academicLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        {/* Contact */}
+        <a
+          href={contactLink.href}
+          onClick={closeMenu}
+        >
+          {contactLink.label}
+        </a>
+
       </div>
+
     </nav>
   )
 }
 
 export default Navbar
+
